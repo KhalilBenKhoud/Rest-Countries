@@ -1,0 +1,149 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+ *, *::before , *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     min-height: 100vh ;
+     font-family: 'Nunito Sans';
+     background-color: whitesmoke;
+     scroll-behavior: smooth ;
+ }
+
+ header {
+     background-color: white;
+     height: 60px;
+ }
+ nav {
+     display: flex;
+     align-items: center;
+     height: 100%;
+     width: 90%;
+     margin: auto;
+ }
+
+
+ .container {
+     width: 90%;
+     margin: auto;
+     padding-top: 30px;
+ }
+
+ .search {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 50px;
+ }
+
+ select {
+     width: 150px ;
+     text-align: center;
+     padding: 10px;
+     background-color: white;
+     outline: none ;
+     border: none;
+     border-radius: 5px;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ }
+
+ option[value=""][disabled] {
+    display: none;
+  }
+
+#search {
+    padding: 10px;
+    background-color: white;
+    outline: none ;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: white url(images/search.png) left no-repeat;
+    padding-left: 37px;  
+    font-size: 1.3rem;
+}
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 270px));
+    gap : 15px ;
+    justify-content: center;
+    
+}
+
+img {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+.item > * {
+    pointer-events: none;
+}
+
+.item img ~ * {
+    padding: 15px;
+   
+}
+
+.item h1, section h1 {
+    font-weight: 800;
+}
+
+.item span, section span {
+    font-weight: 600;
+}
+
+.hide {
+    display: none;
+}
+
+article {
+    display: flex;
+    gap : 50px ;
+    margin-top: 30px;
+}
+
+article img {
+    width: 400px;
+    height: 400px;
+}
+#btn {
+    background-color: cadetblue ;
+    padding: 10px;
+    border: none;
+    outline : none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color : white  ;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .search {
+        flex-direction: column;
+        gap: 15px ;
+    }
+    article {
+        flex-direction: column;
+    }
+    article img {
+        width: 90%;
+        height: 80%;
+    }
+}
