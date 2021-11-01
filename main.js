@@ -2,7 +2,7 @@
 
 async function loadCountries()
 {
-  var API = "https://restcountries.eu/rest/v2/all"
+  var API = "https://restcountries.com/v3.1/all"
   var container = document.getElementsByClassName("countries")[0]
   var response = await fetch(API)
   var data = await response.json()
@@ -39,7 +39,7 @@ function displayCountries(countries)
 
 async function search()
 {   var searchBar = document.getElementById("search")
-    var API = "https://restcountries.eu/rest/v2/all"
+    var API = "https://restcountries.com/v3.1/all"
     var response = await fetch(API)
     var data = await response.json()
 
