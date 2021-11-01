@@ -64,7 +64,7 @@ async function search()
 
 async function filter()
 {   var list = document.getElementsByTagName("select")[0]
-    var API = "https://restcountries.eu/rest/v2/all"
+    var API = "https://restcountries.com/v3.1/all"
     var response = await fetch(API)
     var data = await response.json()
     
@@ -94,7 +94,7 @@ function moreInfo()
     for(let i=0; i < items.length ; i++)
    { items[i].addEventListener("click", async(event) => {
      event.preventDefault()
-     var response = await fetch("https://restcountries.eu/rest/v2/name/"+event.target.getElementsByTagName("h1")[0].innerText)
+     var response = await fetch("https://restcountries.com/v3.1/name/"+event.target.getElementsByTagName("h1")[0].innerText)
      var data = await response.json()
       displayInfo(data)
       })
