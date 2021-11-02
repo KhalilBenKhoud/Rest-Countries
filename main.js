@@ -47,7 +47,7 @@ async function search()
         var searchString = e.target.value.toLowerCase()
          searchString = searchString.charAt(0).toUpperCase() + searchString.slice(1)
         var filtered = data.filter( (ch) => {
-            return ch.name.includes(searchString)
+            return ch.name.official.includes(searchString)
         })
         displayCountries(filtered)
         moreInfo(filtered)
