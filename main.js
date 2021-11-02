@@ -20,8 +20,8 @@ function displayCountries(countries)
       var country = document.createElement("div")
       country.classList.add("item")
       country.innerHTML = `
-      <img src=${e.flag}>
-      <h1>${e.name}</h1>  
+      <img src=${e.flags.png}>
+      <h1>${e.name.official}</h1>  
       <p><span>Population : </span>${e.population} </p>
       <p><span>Region :  </span>${e.region} </p>
       <p><span>Capital :  </span>${e.capital} </p>
