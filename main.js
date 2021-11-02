@@ -21,7 +21,7 @@ function displayCountries(countries)
       country.classList.add("item")
       country.innerHTML = `
       <img src=${e.flags.png}>
-      <h1>${e.name.official}</h1>  
+      <h1>${e.name.common}</h1>  
       <p><span>Population : </span>${e.population} </p>
       <p><span>Region :  </span>${e.region} </p>
       <p><span>Capital :  </span>${e.capital} </p>
@@ -47,7 +47,7 @@ async function search()
         var searchString = e.target.value.toLowerCase()
          searchString = searchString.charAt(0).toUpperCase() + searchString.slice(1)
         var filtered = data.filter( (ch) => {
-            return ch.name.official.includes(searchString)
+            return ch.name.common.includes(searchString)
         })
         displayCountries(filtered)
         moreInfo(filtered)
