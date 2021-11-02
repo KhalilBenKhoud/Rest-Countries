@@ -109,9 +109,9 @@ function displayInfo(data)
      container.innerHTML = `
      <button id="btn">Back &#8592;</button>
      <article>
-     <img src=${data[0].flag}>
+     <img src=${data[0].flags.png}>
      <section>
-     <h1>${data[0].name}</h1>  
+     <h1>${data[0].name.common}</h1>  
      <p><span>Native name : </span>${data[0].nativeName} </p>
       <p><span>Population : </span>${data[0].population} </p>
       <p><span>Region :  </span>${data[0].region} </p>
